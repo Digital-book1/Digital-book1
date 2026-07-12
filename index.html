@@ -937,10 +937,18 @@ paypal.Buttons({
     closeModal(subscriptionModal);
     updateAccess();
   },
-  onError: function(err) {
+  <!--onError: function(err) {
     subscriptionStatus.textContent = 'Subscription failed. Please try again.';
     console.error(err);
-  }
+}-->onError: function(err) {
+    console.error("PayPal Error:", err);
+
+    alert(JSON.stringify(err, null, 2));
+
+    subscriptionStatus.textContent =
+      "Subscription failed: " +
+      (err.message || "See console for details.");
+}
 }).render('#paypal-button-container');
 
 // On page load
