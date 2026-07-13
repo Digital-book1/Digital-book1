@@ -927,7 +927,7 @@ paypal.Buttons({
   createSubscription: function(data, actions) {
     subscriptionStatus.textContent = 'Processing subscription...';
     return actions.subscription.create({
-      'plan_id': 'P-70L44728FE906135JNJDALPA' // Replace with your actual plan ID
+      'plan_id': 'P-35D48894XY730741VNJKGLNI' // Replace with your actual plan ID
     });
   },
   onApprove: function(data, actions) {
@@ -937,18 +937,11 @@ paypal.Buttons({
     closeModal(subscriptionModal);
     updateAccess();
   },
-  <!--onError: function(err) {
+  onError: function(err) {
     subscriptionStatus.textContent = 'Subscription failed. Please try again.';
     console.error(err);
-}-->onError: function(err) {
-    console.error("PayPal Error:", err);
-
-    alert(JSON.stringify(err, null, 2));
-
-    subscriptionStatus.textContent =
-      "Subscription failed: " +
-      (err.message || "See console for details.");
 }
+
 }).render('#paypal-button-container');
 
 // On page load
