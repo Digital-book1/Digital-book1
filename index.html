@@ -927,7 +927,7 @@ paypal.Buttons({
   createSubscription: function(data, actions) {
     subscriptionStatus.textContent = 'Processing subscription...';
     return actions.subscription.create({
-      'plan_id': 'P-35D48894XY730741VNJKGLNI' // Replace with your actual plan ID
+      'plan_id': 'P-35D48894XY730741VNJKGLNI'
     });
   },
   onApprove: function(data, actions) {
