@@ -652,7 +652,7 @@ addBookSchema(
   searchBtn.addEventListener("click", (e) => {
   if (!(currentUser && isSubscribed)) {
     e.preventDefault();closeBookModal();  // Close book details modal if open
-    openBookModal(accountModal);
+    openModal(accountModal);
   } else {
     debouncedSearch();
   }
