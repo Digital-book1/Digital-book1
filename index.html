@@ -398,8 +398,7 @@
     <h2>Privacy Policy</h2>
     <p style="margin-top:15px;">Welcome to FreeBookHub. We securely log user profile parameters strictly to authenticate application premium states via valid encrypted signatures. Transactions are offloaded securely to remote processors.</p>
     <p style="margin-top:10px;">Contact communications directly handled via: <strong>support@bookhub.com</strong></p>
-  </div>
-</div><script src="https://www.paypal.com/sdk/js?client-id=  AcqYi0XpioQd5U_XUhOC8M8SHwI7odJivo25nclbuZvjBviGbvusrQwip0ZtdlT0V-TmK9BvYScu2d_Y   &vault=true&intent=subscription"></script>
+  </div><script src="https://www.paypal.com/sdk/js?client-id=ASC-IsXwNc3orGmUJ_LCxjrj2JN_8JvKK8ZQwmBDV7KHGEdgGissSusl5ftEhuPhJDI7mM8KdCkRbX4m&vault=true&intent=subscription"></script>
   
 <script>
  
@@ -927,7 +926,7 @@ paypal.Buttons({
   createSubscription: function(data, actions) {
     subscriptionStatus.textContent = 'Processing subscription...';
     return actions.subscription.create({
-      'plan_id': 'P-35D48894XY730741VNJKGLNI'
+      'plan_id': 'P-7RA99448TJ927805ENJK7BGI' // Replace with your actual plan ID
     });
   },
   onApprove: function(data, actions) {
@@ -940,8 +939,7 @@ paypal.Buttons({
   onError: function(err) {
     subscriptionStatus.textContent = 'Subscription failed. Please try again.';
     console.error(err);
-}
-
+  }
 }).render('#paypal-button-container');
 
 // On page load
