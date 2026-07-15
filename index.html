@@ -253,7 +253,7 @@
       border-radius: 50px;
       font-weight: bold;
       border: none;
-      cursor: pointer;
+      cursor: pointer;fle:0 0 auto;white-space:nowrap;
     }
 
     .Title { color: #005d8f; font-weight: bold; }
@@ -689,7 +689,7 @@ addBookSchema(
           <h2 id="modalTitle">${book.title}</h2>
           <p><b>Author:</b> ${author}</p>
           <p><b>About this book:</b><br>${subjects}</p>
-          <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:25px;">
+          <div style="display:flex; gap:15px; flex-wrap:nowrap; margin-top:25px;">
             <a href="${book.formats?.['text/html'] || '#'}" target="_blank" rel="noopener" class="read-btn">Read Book</a><button onclick="document.getElementById('downloads').style.display='block';" class="read-btn" style="border:none; cursor:pointer;">Download Book</button></div>
           
           <div id="downloads" style="display:none; margin-top:25px;">
